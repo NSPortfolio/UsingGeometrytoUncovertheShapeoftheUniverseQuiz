@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+	<html>
+		<body style = "background-color: #dc143c;font-family : georgia;">
+			<title>Quiz-Using Geometry to Uncover the Shape of the Universe Quiz</title>
+				<div style = "width: 90%;border: 5px black solid;margin: auto;padding: 5px;background-color: white;" id="main">
+				<div style="margin-top:0; border:5px solid black; padding:5px; height:100px;background-color:RoyalBlue;color:white;" id="header">
+					<h1 style = "color:white;font-family:georgia;font-size:80px;margin-top:0;"> Quiz-Second Wave of Covid-19 </h1>
+				</div>
 
+			<form id = "form1" action = " ">
+				<h2>Question 1</h2>
+					<p>We precisely know the shape of the universe.</p>
+					<input type = "radio" name = "vocab" value = "0" /> True  <br / >
+					<input type = "radio" name = "vocab" value = "25" /> False <br / >
+				<h2>Question 2</h2>
+					<p>What was the author’s purpose in writing this text?</p>
+					<input type = "radio" name = "why" value = "0" /> Entertain <br / >
+					<input type = "radio" name = "why" value = "0" /> Persuade <br / >
+					<input type = "radio" name = "why" value = "25" /> Inform<br / >
+				<h2>Question 3</h2>
+					<p>All countries have experienced the second wave except for...</p>
+					<input type = "radio" name = "countries" value = "0" /> The hyperbolic plane stretches out to infinity in all directions. <br / >
+					<input type = "radio" name = "countries" value = "25" /> When you look up at the night sky, you are looking at fascinating and mesmerizing planets, galaxies, and superclusters all inside of the uniform universe.<br / >
+					<input type = "radio" name = "countries" value = "0" /> We don’t see backdrops of ourselves in the sky. <br / >
+					<input type = "radio" name = "countries" value = "0" /> To make a hyperbolic ball, we must simply fill a ball with 3D shapes that grow smaller as they approach the boundary sphere. <br / >
+				<h2>Question 4</h2>
+					<p>What point of view is the article written in?</p>
+					<input type = "radio" name = "safety" value = "0" /> 1st Person <br / >
+					<input type = "radio" name = "safety" value = "0" /> 2nd Person<br / >
+					<input type = "radio" name = "safety" value = "0" /> 3rd Person <br / >
+
+				<input type = "submit" value = "Submit" style = "border: none; color:white; padding: 10px;  text-align: center; font-family:georgia; font-size:24px; background-color: RoyalBlue;">
+
+				<script>
+			document.getElementById("form1").onsubmit=function() {
+      		vocab = parseInt(document.querySelector('input[name = "vocab"]:checked').value);
+	   		why = parseInt(document.querySelector('input[name = "why"]:checked').value);
+	   		countries = parseInt(document.querySelector('input[name = "countries"]:checked').value);
+	   		safety = parseInt(document.querySelector('input[name = "safety"]:checked').value);
+	   
+	   
+	   		result = vocab + why + countries + safety;
+	   		document.getElementById("grade").innerHTML = result;
+
+	   		if (result == 0) {result2 = "Score:0% <br> Try Again!"};
+			if (result == 25) {result2 = "Score:25% <br> Try again!"};
+			if (result == 50) {result2 = "Score:50% <br> So close! Try again!"};
+			if (result == 75) {result2 = "Score:75% <br> So close! Try again!"};
+			if (result == 100) {result2 = "Score:100% <br> Excellent!"};
+			document.getElementById("grade2").innerHTML = result2; 
+
+			return false;
+
+		}
+
+
+	   			</script>
+
+
+				<p style = "font-size:24px;font-family:georgia;"><span id="grade">__</span></p>
+				<p id="grade2"></p>
+
+	    </body>
+	</html>
+
+<!--“Interactive Quiz.” CodeActually, codeactually.com/interactivequiz.html. -->
